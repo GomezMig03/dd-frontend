@@ -1,0 +1,31 @@
+{
+	"name": "vite-project",
+	"version": "1.0.0-alpha",
+	"type": "module",
+	"scripts": {
+		"init": "neu update",
+		"start": "WEBKIT_DISABLE_DMABUF_RENDERER=1 neu run -- --window-enable-inspector=true",
+		"build": "neu build",
+		"vite-dev": "vite",
+		"vite-build": "NODE_ENV=production vite build"
+	},
+	"dependencies": {
+		"@neutralinojs/lib": "^5.3.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"zustand": "^4.5.5"
+	},
+	"devDependencies": {
+		"@neutralinojs/neu": "^11.0.1",
+		"@types/react": "^18.2.0",
+		"@types/react-dom": "^18.2.0",
+		"@vitejs/plugin-react": "^4.2.1",
+		"eslint": "^8.23.0",
+		"eslint-plugin-react": "^7.31.4",
+		"vite": "^5.2.0"
+	},
+	"engines": {
+		"node": ">=20",
+		"npm": ">=10"
+	}
+}
