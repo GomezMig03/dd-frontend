@@ -6,17 +6,16 @@
 	"url": "/",
 	"enableServer": true,
 	"enableNativeAPI": true,
-	"tokenSecurity": "none", 
+	"tokenSecurity": "one-time", 
 	"logging": {
-		"enabled": true,
-		"writeToLogFile": true
+		"enabled": false,
+		"writeToLogFile": false
 	},
 	"nativeAllowList": [
 		"filesystem.*",
 		"window.focus",
 		"app.exit",
-		"os.*",
-		"events.*"
+		"os.*"
 	],
 	"globalVariables": {
 		"TEST1": "Hello"
@@ -25,18 +24,18 @@
 		"window": {
 			"title": "neutralinojs",
 			"width": 800,
-			"height": 500,
-			"minWidth": 400,
-			"minHeight": 200,
+			"height": 600,
+			"minWidth": 800,
+			"minHeight": 600,
 			"fullScreen": false,
 			"alwaysOnTop": false,
 			"icon": "/public/neutralino.png",
-			"enableInspector": false,
+			"enableInspector": true,
 			"borderless": false,
 			"maximize": false,
 			"hidden": false,
-			"resizable": true,
-			"exitProcessOnClose": false
+			"resizable": false,
+			"exitProcessOnClose": true
 		}
 	},
 	"cli": {
@@ -48,7 +47,7 @@
 		"frontendLibrary": {
 			"patchFile": "./index.html",
 			"projectPath": "./",
-			"devUrl": "http://localhost:5173",
+			"devUrl": "http://localhost:3000",
 			"devCommand": "yarn vite-dev",
 			"buildCommand": "yarn vite-build"
 		}
