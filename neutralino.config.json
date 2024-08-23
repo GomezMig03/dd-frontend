@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"defaultMode": "window",
 	"documentRoot": "/dist/",
+	"port": 3000,
 	"url": "/",
 	"enableServer": true,
 	"enableNativeAPI": true,
@@ -47,7 +48,7 @@
 		"frontendLibrary": {
 			"patchFile": "./index.html",
 			"projectPath": "./",
-			"devUrl": "http://localhost:3000",
+			"devUrl": "http://localhost:5173",
 			"devCommand": "yarn vite-dev",
 			"buildCommand": "yarn vite-build"
 		}
