@@ -7,9 +7,10 @@ const ConvertButton = () => {
     const output = useDDstore((s) => s.output)
     const setInput = useDDstore((s) => s.setInput)
     const setOutput = useDDstore((s) => s.setOutput)
+    const sudo = useDDstore((s) => s.sudo)
 
     const handleConvert = async () => {
-        await basicDD(input, output)
+        await basicDD(input, output, sudo)
           .then(() => {
             setInput('')
             setOutput('')

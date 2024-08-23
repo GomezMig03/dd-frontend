@@ -40,8 +40,10 @@ export const getFileOutput = async () => {
     return entry
 }
 
-export const basicDD = async (input, output) => {
-    const command = `dd if=${input} of=${output} status=progress`
+export const basicDD = async (input, output, sudo) => {
+    let pkexec = ''
+    if (sudo) pkexec = 'pkexec'
+    const command = `${pkexec} dd if=${input} of=${output} status=progress`
     console.log(`command to be executed: ${command}`)
 
     let info = await os.spawnProcess(command);

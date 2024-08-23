@@ -5,4 +5,6 @@ export const useDDstore = create((set) => ({
     output: '',
     setInput: (v) => set({ input: v }),
     setOutput: (v) => set({ output: v }),
+    sudo: false,
+    setSudo: (v) => set({ sudo: v})
 }))
