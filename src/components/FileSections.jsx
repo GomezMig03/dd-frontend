@@ -39,7 +39,7 @@ const FIleSections = () => {
                 </p>
                 <div className='text-inputs'>
                     <input type='text' value={input} onChange={handleInput} />
-                    <img className='path-select' src='icons/folder-svgrepo.svg' onClick={handleFileInput} />
+                    <img className='path-select' src='icons/folder-svgrepo.svg' onClick={handleFileInput} alt="folder icon for input" />
                 </div>
             </section>
             <section id="output-section">
@@ -48,7 +48,7 @@ const FIleSections = () => {
                 </p>
                 <div className='text-inputs'>
                     <input type='text' value={output} onChange={handleOutput} />
-                    <img className='path-select' src='icons/folder-svgrepo.svg' onClick={handleFileOutput} />
+                    <img className='path-select' src='icons/folder-svgrepo.svg' onClick={handleFileOutput} alt="folder icon for output" />
                 </div>
             </section>
       </article>
