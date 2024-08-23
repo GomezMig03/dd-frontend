@@ -61,3 +61,13 @@
   display: flex;
   flex-flow: row nowrap;
 }
+#left-arrow{
+  position: fixed;
+  width: 35px;
+  height: 38px;
+  border: 1px black solid;
+  border-radius: 5px;
+  padding: 3px;
+  right: 10px;
+  margin-top: 15px;
+}
