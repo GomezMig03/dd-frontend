@@ -18,7 +18,10 @@ const FIleSections = () => {
     
       const handleFileInput = async () => {
         await getPath()
-          .then(res => setInput(res))
+          .then(res => {
+            if (String(res).trim() === '') return
+            setInput(res)
+          })
           .catch(error => {
             console.error(error)
           })
@@ -26,7 +29,10 @@ const FIleSections = () => {
     
       const handleFileOutput = async () => {
         await getFileOutput()
-          .then(res => setOutput(res))
+          .then(res => {
+            if (String(res).trim() === '') return
+            setOutput(res)
+        })
           .catch(error => {
             console.error(error)
           })
