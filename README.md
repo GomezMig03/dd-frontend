@@ -29,9 +29,9 @@ yarn start
 
 ## To do list
 - [x] Add basic DD commands
-- [ ] Add list of disks and CDs for better and faster user experience
-- [ ] Add configuration page
+- [x] Add list of disks and CDs for better and faster user experience
+- [x] Add configuration page
 - [ ] Add more languages
-- [ ] Add possibility to execute as sudo with pkexec
+- [x] Add possibility to execute as sudo with pkexec
 - [ ] Add a way to import CSV files to do several commands in order
 - [ ] Stylize the app

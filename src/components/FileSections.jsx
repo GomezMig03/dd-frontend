@@ -1,5 +1,6 @@
 import { useDDstore } from "../store";
 import { getPath, getFileOutput } from "../utilities/commands"
+import DiskList from "./DiskList";
 
 const FIleSections = () => {
     const input = useDDstore((s) => s.input)
@@ -39,6 +40,7 @@ const FIleSections = () => {
                 </p>
                 <div className='text-inputs'>
                     <input type='text' value={input} onChange={handleInput} />
+                    <DiskList type='input' />
                     <img className='path-select' src='icons/folder-svgrepo.svg' onClick={handleFileInput} alt="folder icon for input" />
                 </div>
             </section>
@@ -48,6 +50,7 @@ const FIleSections = () => {
                 </p>
                 <div className='text-inputs'>
                     <input type='text' value={output} onChange={handleOutput} />
+                    <DiskList type='output' />
                     <img className='path-select' src='icons/folder-svgrepo.svg' onClick={handleFileOutput} alt="folder icon for output" />
                 </div>
             </section>

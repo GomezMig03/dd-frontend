@@ -1,4 +1,4 @@
-import { os, events } from '@neutralinojs/lib';
+import { os } from '@neutralinojs/lib';
 
 export const getVersion = async () => {
     let info = await os.execCommand('dd --version');

@@ -85,3 +85,33 @@
   width: 30px;
   height: 17px;
 }
+.disk-list{
+  width: 37px;
+  margin-left: 5px;
+}
+.disk-list img {
+  width: 100%;
+  cursor: pointer;
+}
+.disk-rom-list{
+  z-index: 5;
+  position: fixed;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.disk-rom-list li {
+  margin: 5px 0;
+  border-radius: 5px;
+  padding: 5px;
+}
+.disk-rom-list li:hover {
+  background-color: rgb(192, 152, 230);
+  cursor: pointer;
+}
