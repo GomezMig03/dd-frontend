@@ -49,22 +49,6 @@ export const basicDD = async (input, output, sudo) => {
     let info = await os.spawnProcess(command);
 
     console.log(info.pid)
-
-    events.on('spawnedProcess', (evt) => {
-        if (info.id = evt.detail.id) {
-            switch(evt.detail.action) {
-                case 'stdOut':
-                    console.log(evt.detail.data);
-                    break;
-                case 'stdErr':
-                    console.error(evt.detail.data);
-                    break;
-                case 'exit':
-                    console.log(`Ping process terminated with exit code: ${evt.detail.data}`);
-                    break;
-            }
-        }
-    })
 }
 
 export const getDiskROM = async () => {

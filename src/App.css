@@ -49,6 +49,15 @@
   right: 10px;
   margin-top: 10px;
 }
+#back-button{
+  position: fixed;
+  width: 35px;
+  border: 1px black solid;
+  border-radius: 5px;
+  padding: 3px;
+  right: 10px;
+  margin-top: 15px;
+}
 #github-link{
   cursor: pointer;
 }
@@ -61,13 +70,18 @@
   display: flex;
   flex-flow: row nowrap;
 }
-#left-arrow{
-  position: fixed;
-  width: 35px;
-  height: 38px;
-  border: 1px black solid;
-  border-radius: 5px;
-  padding: 3px;
-  right: 10px;
-  margin-top: 15px;
+#config-page{
+  display: flex;
+  flex-flow: column nowrap;
+}
+#config-page article{
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  align-items: center;
+  margin-top: 25px;
+}
+#config-page input{
+  width: 30px;
+  height: 17px;
 }
