@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"defaultMode": "window",
 	"documentRoot": "/dist/",
-	"port": 3021,
+	"port": 3020,
 	"url": "/",
 	"enableServer": true,
 	"enableNativeAPI": true,
@@ -23,7 +23,7 @@
 	},
 	"modes": {
 		"window": {
-			"title": "neutralinojs",
+			"title": "DD Frontend",
 			"width": 800,
 			"height": 600,
 			"minWidth": 800,
@@ -40,7 +40,7 @@
 		}
 	},
 	"cli": {
-		"binaryName": "neutralinojs",
+		"binaryName": "ddfrontend",
 		"resourcesPath": "/dist/",
 		"extensionsPath": "/extensions/",
 		"binaryVersion": "5.1.0",
