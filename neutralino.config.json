@@ -3,11 +3,11 @@
 	"version": "1.0.0",
 	"defaultMode": "window",
 	"documentRoot": "/dist/",
-	"port": 3020,
+	"port": 3021,
 	"url": "/",
 	"enableServer": true,
 	"enableNativeAPI": true,
-	"tokenSecurity": "one-time", 
+	"tokenSecurity": "none", 
 	"logging": {
 		"enabled": false,
 		"writeToLogFile": false
