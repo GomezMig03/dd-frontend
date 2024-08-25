@@ -32,6 +32,8 @@ yarn start
 - [x] Add list of disks and CDs for better and faster user experience
 - [x] Add configuration page
 - [ ] Add more languages
+- [ ] Add a way of compressing with tools like xz, gzip, etc.
 - [x] Add possibility to execute as sudo with pkexec
-- [ ] Add a way to import CSV files to do several commands in order
+- [ ] Add a way to import CSVs or similar types of files to do several commands in order
 - [ ] Stylize the app
+- [ ] Add different themes
