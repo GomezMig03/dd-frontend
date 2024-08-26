@@ -14,8 +14,8 @@ getLatestVersion()
 
 <template>
     <a target="_blank" :href="last">
-        <article>
-            <h4>
+        <article id="download-block">
+            <h4 id="download-text">
                 Download (AppImage x64)
             </h4>
         </article>
@@ -24,14 +24,14 @@ getLatestVersion()
 </template>
 
 <style >
-article{
+#download-block{
     background-color: rgb(95, 68, 27);
     border-radius: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
     cursor: pointer;
+    width: fit-content;
+    padding: 5px 10px;
 }
-article:hover{
+#download-block:hover{
     background-color: rgb(110, 79, 31);
 }
 a{
