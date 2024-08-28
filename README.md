@@ -30,6 +30,9 @@ yarn install
 yarn start
 ```
 
+## Environment variables
+This project is run using WEBKIT_DISABLE_DMABUF_RENDERER=1, which improves compatibility with Nvidia propietary drivers, feel free to delete that line (only for yourself) if you don't use them.
+
 ## To do list
 - [x] Add basic DD commands
 - [x] Add list of disks and CDs for better and faster user experience
