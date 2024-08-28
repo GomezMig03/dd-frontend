@@ -1,56 +1,56 @@
 {
-	"applicationId": "com.ddfrontend.gomezmig03",
-	"version": "1.0.0",
-	"defaultMode": "window",
-	"documentRoot": "/dist/",
-	"port": 3021,
-	"url": "/",
-	"enableServer": true,
-	"enableNativeAPI": true,
-	"tokenSecurity": "none", 
-	"logging": {
-		"enabled": false,
-		"writeToLogFile": false
-	},
-	"nativeAllowList": [
-		"filesystem.*",
-		"window.focus",
-		"app.exit",
-		"os.*"
-	],
-	"globalVariables": {
-		"TEST1": "Hello"
-	},
-	"modes": {
-		"window": {
-			"title": "DD Frontend",
-			"width": 800,
-			"height": 600,
-			"minWidth": 800,
-			"minHeight": 600,
-			"fullScreen": false,
-			"alwaysOnTop": false,
-			"icon": "/public/neutralino.png",
-			"enableInspector": false,
-			"borderless": false,
-			"maximize": false,
-			"hidden": false,
-			"resizable": false,
-			"exitProcessOnClose": true
-		}
-	},
-	"cli": {
-		"binaryName": "ddfrontend",
-		"resourcesPath": "/dist/",
-		"extensionsPath": "/extensions/",
-		"binaryVersion": "5.1.0",
-		"clientVersion": "5.1.0",
-		"frontendLibrary": {
-			"patchFile": "./index.html",
-			"projectPath": "./",
-			"devUrl": "http://localhost:5173",
-			"devCommand": "yarn vite-dev",
-			"buildCommand": "yarn vite-build"
-		}
-	}
+  "applicationId": "com.ddfrontend.gomezmig03",
+  "version": "1.0.0",
+  "defaultMode": "window",
+  "documentRoot": "/dist/",
+  "port": 3021,
+  "url": "/",
+  "enableServer": true,
+  "enableNativeAPI": true,
+  "tokenSecurity": "one-time",
+  "logging": {
+    "enabled": false,
+    "writeToLogFile": false
+  },
+  "nativeAllowList": [
+    "filesystem.*",
+    "window.focus",
+    "app.exit",
+    "os.*"
+  ],
+  "globalVariables": {
+    "TEST1": "Hello"
+  },
+  "modes": {
+    "window": {
+      "title": "DD Frontend",
+      "width": 800,
+      "height": 600,
+      "minWidth": 800,
+      "minHeight": 600,
+      "fullScreen": false,
+      "alwaysOnTop": false,
+      "icon": "/public/neutralino.png",
+      "enableInspector": false,
+      "borderless": false,
+      "maximize": false,
+      "hidden": false,
+      "resizable": false,
+      "exitProcessOnClose": true
+    }
+  },
+  "cli": {
+    "binaryName": "ddfrontend",
+    "resourcesPath": "/dist/",
+    "extensionsPath": "/extensions/",
+    "binaryVersion": "5.3.0",
+    "clientVersion": "5.1.0",
+    "frontendLibrary": {
+      "patchFile": "./index.html",
+      "projectPath": "./",
+      "devUrl": "http://localhost:5173",
+      "devCommand": "yarn vite-dev",
+      "buildCommand": "yarn vite-build"
+    }
+  }
 }
