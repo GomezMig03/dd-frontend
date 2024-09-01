@@ -34,7 +34,7 @@ yarn start
 This project is run using WEBKIT_DISABLE_DMABUF_RENDERER=1, which improves compatibility with Nvidia propietary drivers, feel free to delete that line (only for yourself) if you don't use them.
 
 ## Known Issues
-Current version of webkitgtk4 that KDE uses is different from the ones in Cinnamon and Gnome, so by default the app won't open on KDE desktops, the fix to this would be using webkitgtk4.0 isntead of webkitgtk4.1.
+If you don't have webkitgtk4.0 the app won't open, the fix to this would be just installing webkitgtk4.0.
 
 ## To do list
 - [x] Add basic DD commands
