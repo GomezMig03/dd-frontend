@@ -41,7 +41,6 @@ If you don't have webkitgtk4.0 the app won't open, the fix to this would be just
 - [x] Add list of disks and CDs for better and faster user experience
 - [x] Add configuration page
 - [ ] Add more languages
-- [ ] Fix webkitgtk version issues
 - [x] Add possibility to execute as sudo with pkexec
 - [ ] Add a way to import CSVs or similar types of files to do several commands in order
 - [ ] Stylize the app
