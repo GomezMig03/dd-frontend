@@ -55,7 +55,6 @@ yay -S webkit2gtk-hvml
 - [x] Add list of disks and CDs for better and faster user experience
 - [x] Add configuration page
 - [ ] Add more languages
-- [ ] Fix webkitgtk version issues
 - [x] Add possibility to execute as sudo with pkexec
 - [ ] Add a way to import CSVs or similar types of files to do several commands in order
 - [ ] Stylize the app
