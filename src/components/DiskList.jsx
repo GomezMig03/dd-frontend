@@ -16,7 +16,7 @@ const DiskList = (props) => {
                 console.error(error)
                 setDiskList([`Error: ${error}`])
             })
-    }, [])
+    }, [disk])
 
     const handleListClick = (val) => {
         props.type === 'input' ? setInput(val.substring(0, val.indexOf(' '))) : setOutput(val.substring(0, val.indexOf(' ')))

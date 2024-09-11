@@ -26,11 +26,11 @@ const ConfigPage = () => {
             <section id="config-page">
                 <article>
                     <p>Execute with sudo permissions: </p>
-                    <input type="checkbox" onChange={handleSudoCheckbox} />
+                    <input type="checkbox" onChange={handleSudoCheckbox} checked={sudo} />
                 </article>
                 <article>
                 <p>Show full disks instead of partitions: </p>
-                <input type="checkbox" onChange={handleDisk} />
+                <input type="checkbox" onChange={handleDisk} checked={disk} />
                 </article>
             </section>
         </Fragment>
