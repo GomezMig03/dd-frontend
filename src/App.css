@@ -73,13 +73,15 @@
 #config-page{
   display: flex;
   flex-flow: column nowrap;
+  padding: 2vh 3vw;
 }
 #config-page article{
   display: flex;
   flex-direction: row;
   padding: 20px;
   align-items: center;
-  margin-top: 25px;
+  margin-top: 7vh;
+  margin-bottom: -12vh;
 }
 #config-page input{
   width: 30px;

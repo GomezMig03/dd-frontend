@@ -1,1 +1,0 @@
-df -h | grep "^/dev/" | grep -v " /boot\| /home\| /efi"

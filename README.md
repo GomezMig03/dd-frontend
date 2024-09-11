@@ -58,7 +58,7 @@ yay -S webkit2gtk-hvml
 - [ ] Add a way to import CSVs or similar types of files to do several commands in order
 - [ ] Stylize the app
 - [ ] Add different themes
-- [ ] Option to work with complete drives instead of just partitions (for cloning purposes)
+- [x] Option to work with complete drives instead of just partitions (for cloning purposes)
 - [ ] Add advance options in config
 - [ ] Add advance option for conversion of data (ASCII, EBCDIC, IBM, etc)
 - [ ] Add an advance option for compressing with tools like xz, gzip, etc.
