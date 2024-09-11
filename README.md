@@ -39,7 +39,6 @@ If you don't have webkitgtk4.0 the app won't open, the fix to this would be just
 In Fedora or Noabara
 ```
 sudo dnf install webkit2gtk4.0
-
 ```
 In Debian and derivatives
 ```
