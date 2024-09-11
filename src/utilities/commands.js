@@ -51,7 +51,7 @@ export const basicDD = async (input, output, sudo) => {
     console.log(info.pid)
 }
 
-export const getDiskROM = async () => {
+export const getDiskROM = async (getFullDisk) => {
     let info = await os.execCommand(`df -h | grep "^/dev/" | grep -v " /boot\| /home\| /efi"`)
     if (info.stdErr) {
         console.error(info.stdErr)
@@ -62,7 +62,10 @@ export const getDiskROM = async () => {
     romArray.pop()
 
     const romPATH = romArray.map((val) => {
-        const path = val.substring(0, val.indexOf(" "))
+        let path = val.substring(0, val.indexOf(" "))
+        if (getFullDisk) {
+            path = path.substring(0, path.length-1)
+        }
         let name = val.substring(val.lastIndexOf("/")+1, val.length)
         if (name === "boot" | name === "home" | name === "efi") return
         if (name === "") name = "root"

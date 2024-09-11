@@ -7,9 +7,10 @@ const DiskList = (props) => {
     const [diskList, setDiskList] = useState([])
     const setInput = useDDstore((s) => s.setInput)
     const setOutput = useDDstore((s) => s.setOutput)
+    const disk = useDDstore((s) => s.disk)
 
     useEffect(() => {
-        getDiskROM()
+        getDiskROM(disk)
             .then(res => setDiskList(res))
             .catch(error => {
                 console.error(error)

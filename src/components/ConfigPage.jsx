@@ -5,9 +5,15 @@ import { useDDstore } from "../store"
 const ConfigPage = () => {
     const sudo = useDDstore((s) => s.sudo)
     const setSudo = useDDstore((s) => s.setSudo)
+    const disk = useDDstore((s) => s.disk)
+    const setDisk = useDDstore((s) => s.setDisk)
 
     const handleSudoCheckbox = () => {
         setSudo(!sudo)
+    }
+
+    const handleDisk = () => {
+        setDisk(!disk)
     }
 
     return(
@@ -21,6 +27,10 @@ const ConfigPage = () => {
                 <article>
                     <p>Execute with sudo permissions: </p>
                     <input type="checkbox" onChange={handleSudoCheckbox} />
+                </article>
+                <article>
+                <p>Show full disks instead of partitions: </p>
+                <input type="checkbox" onChange={handleDisk} />
                 </article>
             </section>
         </Fragment>
