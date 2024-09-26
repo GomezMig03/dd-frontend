@@ -36,7 +36,7 @@ This project is run using WEBKIT_DISABLE_DMABUF_RENDERER=1, which improves compa
 ## Known Issues
 If you don't have webkitgtk4.0 the app won't open, the fix to this would be just installing webkitgtk4.0.
 
-In Fedora or Noabara
+In Fedora or Nobara
 ```
 sudo dnf install webkit2gtk4.0
 ```
