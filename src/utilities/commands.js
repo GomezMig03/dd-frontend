@@ -1,4 +1,4 @@
-import { os, filesystem } from '@neutralinojs/lib';
+import { os } from '@neutralinojs/lib';
 
 export const getVersion = async () => {
     let info = await os.execCommand('dd --version');
@@ -7,8 +7,7 @@ export const getVersion = async () => {
         return "No dd found in system"
     }
     const number = info.stdOut.substring(14, 18)
-    const version = `dd version:${number}`
-    return version
+    return `dd version:${number}`
 }
 
 export const getPath = async () => {

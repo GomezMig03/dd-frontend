@@ -8,7 +8,6 @@ const Footer = () => {
     const resolveVersion = async () => {
             getVersion()
           .then(res => {
-            console.log(res)
             setDDVersion(res)
           })
           .catch(error => {
