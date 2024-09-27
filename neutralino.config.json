@@ -43,8 +43,8 @@
     "binaryName": "ddfrontend",
     "resourcesPath": "/dist/",
     "extensionsPath": "/extensions/",
-    "binaryVersion": "5.3.0",
-    "clientVersion": "5.3.0",
+    "binaryVersion": "5.4.0",
+    "clientVersion": "5.4.0",
     "frontendLibrary": {
       "patchFile": "./index.html",
       "projectPath": "./",
