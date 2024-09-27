@@ -1,4 +1,4 @@
-import { os } from '@neutralinojs/lib';
+import { os, filesystem } from '@neutralinojs/lib';
 
 export const getVersion = async () => {
     let info = await os.execCommand('dd --version');
@@ -50,6 +50,11 @@ export const basicDD = async (input, output, sudo) => {
 
     console.log(info.pid)
 }
+
+const verifyPath = async (path) => {
+    const validPathRegex = /^\/[a-zA-Z0-9._-]+(\/[a-zA-Z0-9._-]+)*$/;
+    return validPathRegex
+} 
 
 export const getDiskROM = async (getFullDisk) => {
     let info = await os.execCommand(`df -h | grep "^/dev/" | grep -v " /boot\| /home\| /efi"`)
