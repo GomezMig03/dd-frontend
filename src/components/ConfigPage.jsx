@@ -13,6 +13,7 @@ const ConfigPage = () => {
     }
 
     const handleDisk = () => {
+        if (disk === false) setSudo(true)
         setDisk(!disk)
     }
 
