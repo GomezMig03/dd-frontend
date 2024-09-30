@@ -1,4 +1,5 @@
-export const getLatestVersion = async () => {
+export const getLatestVersion = async (arch) => {
+    if(arch === undefined) arch = "x64"
     try {
         const response = await fetch('https://api.github.com/repos/GomezMig03/dd-frontend/releases/latest');
         const data = await response.json();
@@ -10,7 +11,7 @@ export const getLatestVersion = async () => {
         }
 
         //console.log(`https://github.com/GomezMig03/dd-frontend/releases/download/v${tagName}/DDFrontend-${tagName}-x64.AppImage`)
-        return `https://github.com/GomezMig03/dd-frontend/releases/download/v${tagName}/DDFrontend-${tagName}-x64.AppImage`
+        return `https://github.com/GomezMig03/dd-frontend/releases/download/v${tagName}/DDFrontend-${tagName}-${arch}.AppImage`
     } catch (error) {
         console.error('Error fetching the latest release:', error);
     }
