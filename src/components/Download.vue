@@ -5,7 +5,9 @@ const last = ref(null)
 const openVersionList = ref(false)
 const arch = ref("x64")
 const unusedArch = ref("arm64")
-getLatestVersion(arch.value)
+
+const updateVersion = async () => {
+    getLatestVersion(arch.value)
     .then(res => {
         last.value = res
         console.log(last.value)
@@ -13,8 +15,8 @@ getLatestVersion(arch.value)
     .catch(error => {
         console.error(error)
     })
-
-console.log(openVersionList)
+}
+updateVersion()
 
 const handleListClick = () => {
     openVersionList.value = !openVersionList.value
@@ -27,6 +29,8 @@ const changeArchs = () => {
     arch.value = unusedArch.value
     unusedArch.value = temp
     openVersionList.value = false
+    console.log(arch.value)
+    updateVersion()
 }
 </script>
 

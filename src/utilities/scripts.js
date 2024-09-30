@@ -1,4 +1,5 @@
 export const getLatestVersion = async (arch) => {
+    console.log(arch)
     if(arch === undefined) arch = "x64"
     try {
         const response = await fetch('https://api.github.com/repos/GomezMig03/dd-frontend/releases/latest');
