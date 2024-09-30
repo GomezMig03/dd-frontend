@@ -34,7 +34,7 @@ yarn start
 This project is run using WEBKIT_DISABLE_DMABUF_RENDERER=1, which improves compatibility with Nvidia propietary drivers, feel free to delete that line (only for yourself) if you don't use them.
 
 ## Known Issues
-If you don't have webkitgtk4.0 the app won't open, the fix to this would be just installing webkitgtk4.0.
+If you don't have webkitgtk4.0 in arm the app won't open, the fix to this would be just installing webkitgtk4.0.
 
 In Fedora or Nobara
 ```
@@ -48,6 +48,8 @@ In Arch Linux or Manjaro
 ```
 yay -S webkit2gtk-hvml
 ```
+
+Keep in mind that, in the moment, in x64, the app will only open if you have 4.1
 
 ## To do list
 - [x] Add basic DD commands
