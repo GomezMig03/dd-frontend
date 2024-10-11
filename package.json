@@ -1,33 +1,26 @@
 {
-	"name": "ddfrontend",
-	"version": "1.2.0-beta",
-	"type": "module",
-	"scripts": {
-		"init": "neu update",
-		"start": "WEBKIT_DISABLE_DMABUF_RENDERER=1 neu run",
-		"build": "neu build",
-		"vite-dev": "vite",
-		"vite-build": "NODE_ENV=production vite build"
-	},
-	"dependencies": {
-		"@neutralinojs/lib": "^5.4.0",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"wouter": "^3.3.3",
-		"zustand": "^4.5.5"
-	},
-	"devDependencies": {
-		"@neutralinojs/neu": "^11.3.0",
-		"@types/react": "^18.2.0",
-		"@types/react-dom": "^18.2.0",
-		"@vitejs/plugin-react": "^4.2.1",
-		"eslint": "^8.23.0",
-		"eslint-plugin-react": "^7.31.4",
-		"vite": "^5.2.0",
-		"yarn": "^1.22.22"
-	},
-	"engines": {
-		"node": ">=20",
-		"npm": ">=10"
-	}
+  "name": "dd-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "start": "WEBKIT_DISABLE_DMABUF_RENDERER=1 tauri dev"
+  },
+  "dependencies": {
+    "@tauri-apps/api": ">=2.0.0",
+    "@tauri-apps/plugin-shell": ">=2.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "wouter": "^3.3.5",
+    "zustand": "^5.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": ">=2.0.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.3.1"
+  }
 }

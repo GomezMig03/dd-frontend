@@ -1,11 +1,13 @@
-import { openGithub } from '../utilities/services';
-import { getVersion } from '../utilities/commands';
+//import { openGithub } from '../utilities/services';
+//import { getVersion } from '../utilities/commands';
 import { useState, useEffect, lazy } from 'react';
 
 const Footer = () => {
     const [ddVersion, setDDVersion] = useState('No dd found in system')
 
     const resolveVersion = async () => {
+      setDDVersion("function to get dd version is in the todo list")
+      /*
             getVersion()
           .then(res => {
             setDDVersion(res)
@@ -14,11 +16,16 @@ const Footer = () => {
             console.error(error)
             resolveVersion()
           })
+            */
       } 
 
       useEffect(() => {
         resolveVersion()
       }, [])
+
+    const openGithub = () => {
+      console.log("Todo")
+    }
 
     return(
         <footer id="footer">

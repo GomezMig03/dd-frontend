@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { useDDstore } from "../store";
-import { basicDD } from "../utilities/commands";
+//import { basicDD } from "../utilities/commands";
 
 const ConvertButton = () => {
     const input = useDDstore((s) => s.input)
@@ -10,6 +10,8 @@ const ConvertButton = () => {
     const sudo = useDDstore((s) => s.sudo)
 
     const handleConvert = async () => {
+      console.log("Todo")
+      /*
         await basicDD(input, output, sudo)
           .then(() => {
             setInput('')
@@ -18,6 +20,7 @@ const ConvertButton = () => {
           .catch(error => {
             console.error(error)
           })
+            */
       }
 
     return(

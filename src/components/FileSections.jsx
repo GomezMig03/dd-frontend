@@ -1,5 +1,5 @@
 import { useDDstore } from "../store";
-import { getPath, getFileOutput } from "../utilities/commands"
+//import { getPath, getFileOutput } from "../utilities/commands"
 import DiskList from "./DiskList";
 
 const FIleSections = () => {
@@ -17,6 +17,8 @@ const FIleSections = () => {
       }
     
       const handleFileInput = async () => {
+        console.log("Todo")
+        /*
         await getPath()
           .then(res => {
             if (String(res).trim() === '') return
@@ -25,9 +27,12 @@ const FIleSections = () => {
           .catch(error => {
             console.error(error)
           })
+            */
       }
     
       const handleFileOutput = async () => {
+        onsole.log("Todo")
+        /*
         await getFileOutput()
           .then(res => {
             if (String(res).trim() === '') return
@@ -36,6 +41,7 @@ const FIleSections = () => {
           .catch(error => {
             console.error(error)
           })
+            */
       }
 
       return(

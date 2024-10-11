@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import { getDiskROM } from "../utilities/commands"
+//import { getDiskROM } from "../utilities/commands"
 import { useDDstore } from "../store"
 
 const DiskList = (props) => {
@@ -20,12 +20,14 @@ const DiskList = (props) => {
     document.addEventListener('mousedown', outsideClick)
 
     useEffect(() => {
+        /*
         getDiskROM(disk)
             .then(res => setDiskList(res))
             .catch(error => {
                 console.error(error)
                 setDiskList([`Error: ${error}`])
             })
+                */
     }, [disk])
 
     const handleListClick = (val) => {
