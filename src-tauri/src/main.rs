@@ -4,5 +4,5 @@
 fn main() {
     dd_frontend_lib::run()
 
-    // TODO: Open github in the browser, get dd version (dd --version), get file input and output with system's file manager, make basic dd comands and get list of disks
+    // TODO: get file input and output with system's file manager, make basic dd commands and get list of disks
 }

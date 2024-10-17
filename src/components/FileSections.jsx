@@ -1,6 +1,6 @@
 import { useDDstore } from "../store";
-//import { getPath, getFileOutput } from "../utilities/commands"
 import DiskList from "./DiskList";
+import { open, save } from '@tauri-apps/plugin-dialog'
 
 const FIleSections = () => {
     const input = useDDstore((s) => s.input)
@@ -10,41 +10,27 @@ const FIleSections = () => {
 
     const handleInput = (event) => {
         setInput(event.target.value)
-      }
-    
-      const handleOutput = (event) => {
-        setOutput(event.target.value)
-      }
-    
-      const handleFileInput = async () => {
-        console.log("Todo")
-        /*
-        await getPath()
-          .then(res => {
-            if (String(res).trim() === '') return
-            setInput(res)
-          })
-          .catch(error => {
-            console.error(error)
-          })
-            */
-      }
-    
-      const handleFileOutput = async () => {
-        onsole.log("Todo")
-        /*
-        await getFileOutput()
-          .then(res => {
-            if (String(res).trim() === '') return
-            setOutput(res)
-        })
-          .catch(error => {
-            console.error(error)
-          })
-            */
-      }
+    }
 
-      return(
+    const handleOutput = (event) => {
+        setOutput(event.target.value)
+    }
+
+    const handleFileInput = async () => {
+        const userInput = await open({
+            multiple: false,
+            directory: false
+        })
+
+        setInput(userInput)
+    }
+
+    const handleFileOutput = async () => {
+        const userOutput = await save()
+        setOutput(userOutput)
+    }
+
+    return (
         <article id="file-sections">
             <section id="input-section">
                 <p>
@@ -66,8 +52,8 @@ const FIleSections = () => {
                     <img className='path-select' src='icons/folder-svgrepo.svg' onClick={handleFileOutput} alt="folder icon for output" />
                 </div>
             </section>
-      </article>
-      )
+        </article>
+    )
 }
 
 export default FIleSections
