@@ -1,6 +1,7 @@
 //import { openGithub } from '../utilities/services';
 import { useState, useEffect } from 'react';
 import { invoke } from '@tauri-apps/api/core';
+import { open } from '@tauri-apps/plugin-shell';
 
 const Footer = () => {
   const [ddVersion, setDDVersion] = useState('No dd found in system')
@@ -13,8 +14,8 @@ const Footer = () => {
     resolveVersion()
   }, [])
 
-  const openGithub = () => {
-    console.log("Todo")
+  const openGithub = async () => {
+    await open('https://github.com/GomezMig03/dd-frontend')
   }
 
   return (
