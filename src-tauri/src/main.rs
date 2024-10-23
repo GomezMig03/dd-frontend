@@ -4,5 +4,5 @@
 fn main() {
     dd_frontend_lib::run()
 
-    // TODO: Make basic dd commands, add sudo and get list of disks and partitions
+    // TODO: Make basic dd commands and add sudo.
 }

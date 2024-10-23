@@ -29,12 +29,13 @@ This project is run using WEBKIT_DISABLE_DMABUF_RENDERER=1, which improves compa
 - [x] Add basic DD commands
 - [x] Add list of disks and CDs for better and faster user experience
 - [x] Add configuration page
-- [ ] Add more languages
 - [x] Add possibility to execute as sudo with pkexec
+- [x] Option to work with complete drives instead of just partitions (for cloning purposes)
+- [ ] Migration to tauri
+- [ ] Add more languages
 - [ ] Add a way to import CSVs or similar types of files to do several commands in order
 - [ ] Stylize the app
 - [ ] Add different themes
-- [x] Option to work with complete drives instead of just partitions (for cloning purposes)
 - [ ] Add advance options in config
 - [ ] Add advance option for conversion of data (ASCII, EBCDIC, IBM, etc)
 - [ ] Add an advance option for compressing with tools like xz, gzip, etc.

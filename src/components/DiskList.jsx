@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 //import { getDiskROM } from "../utilities/commands"
 import { useDDstore } from "../store"
+import { invoke } from "@tauri-apps/api/core"
 
 const DiskList = (props) => {
     const ref = useRef(null)
@@ -20,6 +21,8 @@ const DiskList = (props) => {
     document.addEventListener('mousedown', outsideClick)
 
     useEffect(() => {
+        invoke('get_disk', { getFull: disk })
+            .then((list) => setDiskList(list))
         /*
         getDiskROM(disk)
             .then(res => setDiskList(res))
@@ -35,7 +38,7 @@ const DiskList = (props) => {
         setOpenList(!openList)
     }
 
-    return(
+    return (
         <div className="disk-list" ref={ref} >
             <img src="icons/down-arrow-svgrepo.svg" onClick={() => setOpenList(!openList)} />
             {openList && (
