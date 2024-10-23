@@ -4,5 +4,5 @@
 fn main() {
     dd_frontend_lib::run()
 
-    // TODO: get file input and output with system's file manager, make basic dd commands and get list of disks
+    // TODO: Make basic dd commands, add sudo and get list of disks and partitions
 }

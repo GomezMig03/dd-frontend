@@ -2,15 +2,30 @@ use std::process::Command;
 
 #[tauri::command]
 fn get_version() -> String {
-    let output = Command::new("dd")
-        .arg("--version")
-        .output()
-        .expect("No dd found in system");
+    let info = Command::new("dd").arg("--version").output();
 
-    let version = String::from_utf8(output.stdout).expect("Invalid UTF-8");
-
-    String::from(&version[14..18])
+    match info {
+        Ok(output) => {
+            if output.status.success() {
+                let version = String::from_utf8_lossy(&output.stdout).to_string();
+                String::from(&version[14..18])
+            } else {
+                String::from("Error")
+            }
+        }
+        Err(_) => String::from("Error"),
+    }
 }
+
+/*
+fn get_disk(get_full: bool) -> Vec<String> {
+    let info = Command::new("sh")
+        .arg("-c")
+        .arg("df -h | grep '^/dev/' | grep -v ' /boot\\| /home\\| /efi'")
+        .output()
+        .expect("Error getting disks");
+}
+*/
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
