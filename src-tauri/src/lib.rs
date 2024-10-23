@@ -31,7 +31,7 @@ fn get_disk(get_full: bool) -> Vec<String> {
             if output.status.success() {
                 let out = String::from_utf8_lossy(&output.stdout);
 
-                let mut rom_vec: Vec<&str> = out.lines().collect();
+                let rom_vec: Vec<&str> = out.lines().collect();
 
                 for rom in rom_vec {
                     let space = rom.find(" ").unwrap_or(rom.len());
