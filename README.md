@@ -31,7 +31,7 @@ This project is run using WEBKIT_DISABLE_DMABUF_RENDERER=1, which improves compa
 - [x] Add configuration page
 - [x] Add possibility to execute as sudo with pkexec
 - [x] Option to work with complete drives instead of just partitions (for cloning purposes)
-- [ ] Migration to tauri
+- [x] Migration to tauri
 - [ ] Add more languages
 - [ ] Add a way to import CSVs or similar types of files to do several commands in order
 - [ ] Stylize the app

@@ -1,33 +1,39 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { useDDstore } from "../store";
-//import { basicDD } from "../utilities/commands";
+import { invoke } from "@tauri-apps/api/core";
 
 const ConvertButton = () => {
-    const input = useDDstore((s) => s.input)
-    const output = useDDstore((s) => s.output)
+    const inp = useDDstore((s) => s.input)
+    const out = useDDstore((s) => s.output)
+    const sudo = useDDstore((s) => s.sudo)
     const setInput = useDDstore((s) => s.setInput)
     const setOutput = useDDstore((s) => s.setOutput)
-    const sudo = useDDstore((s) => s.sudo)
+
+    const [error, setError] = useState(false)
 
     const handleConvert = async () => {
-      console.log("Todo")
-      /*
-        await basicDD(input, output, sudo)
-          .then(() => {
-            setInput('')
-            setOutput('')
-          })
-          .catch(error => {
-            console.error(error)
-          })
-            */
-      }
+        setError(false)
+        invoke('use_dd', { inp, out, sudo })
+            .then((e) => {
+                console.log(e)
+                if (!e) {
+                    setError(true)
+                } else {
+                    setInput("")
+                    setOutput("")
+                }
+            })
+            .catch(() => setError(true))
+    }
 
-    return(
+    return (
         <Fragment>
             <button id="convert-button" onClick={handleConvert} >
                 Convert
             </button>
+            {error && (
+                <span id="error-message">An error has ocurred during the execution of the dd command </span>
+            )}
         </Fragment>
     )
 }

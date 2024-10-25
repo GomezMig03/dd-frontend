@@ -1,3 +1,5 @@
+use regex::Regex;
+use std::fs;
 use std::process::Command;
 
 #[tauri::command]
@@ -66,12 +68,54 @@ fn get_disk(get_full: bool) -> Vec<String> {
     }
 }
 
+#[tauri::command]
+fn use_dd(inp: String, out: String, sudo: bool) -> bool {
+    if !verify_path(&inp) || !verify_path(&out) {
+        return false;
+    }
+
+    if fs::metadata(&out).is_ok() {
+        if let Err(_) = fs::remove_file(&out) {
+            return false;
+        }
+    }
+
+    let com = if sudo {
+        format!("pkexec dd if={} of={} status=progress", inp, out)
+    } else {
+        format!("dd if={} of={} status=progress", inp, out)
+    };
+
+    let info = Command::new("sh").arg("-c").arg(&com).output();
+
+    match info {
+        Ok(output) => {
+            if output.status.success() {
+                true
+            } else {
+                false
+            }
+        }
+        Err(e) => {
+            println!("Error: {}", e);
+            false
+        }
+    }
+}
+
+fn verify_path(path: &String) -> bool {
+    let pattern = r"^/[a-zA-Z0-9._-]+(/[a-zA-Z0-9._-]+)*$";
+    let reg = Regex::new(pattern).unwrap();
+
+    reg.is_match(&path)
+}
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_dialog::init())
         .plugin(tauri_plugin_shell::init())
-        .invoke_handler(tauri::generate_handler![get_version, get_disk])
+        .invoke_handler(tauri::generate_handler![get_version, get_disk, use_dd])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

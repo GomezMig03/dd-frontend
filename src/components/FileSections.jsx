@@ -21,7 +21,6 @@ const FIleSections = () => {
             multiple: false,
             directory: false
         })
-
         setInput(userInput)
     }
 
