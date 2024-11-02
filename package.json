@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tauri build",
     "preview": "vite preview",
     "tauri": "tauri",
-    "start": "WEBKIT_DISABLE_DMABUF_RENDERER=1 tauri dev"
+    "start": "tauri dev"
   },
   "dependencies": {
     "@tauri-apps/api": ">=2.0.0",
