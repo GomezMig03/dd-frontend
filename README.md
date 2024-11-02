@@ -22,6 +22,11 @@ Now you can test the app
 npm start
 ```
 
+And build it
+```
+npm run tauri build
+```
+
 ## Environment variables
 This project is run using WEBKIT_DISABLE_DMABUF_RENDERER=1, which improves compatibility with Nvidia propietary drivers, feel free to delete that line (only for yourself) if you don't use them.
 
@@ -32,7 +37,7 @@ This project is run using WEBKIT_DISABLE_DMABUF_RENDERER=1, which improves compa
 - [x] Add possibility to execute as sudo with pkexec
 - [x] Option to work with complete drives instead of just partitions (for cloning purposes)
 - [x] Migration to tauri
-- [ ] Add OOTB support for nvidia propietary drivers
+- [x] Add OOTB support for nvidia propietary drivers
 - [ ] Add flatpak version
 - [ ] Add more languages
 - [ ] Add a way to import CSVs or similar types of files to do several commands in order
