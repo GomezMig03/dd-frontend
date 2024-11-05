@@ -39,6 +39,8 @@ This project is run using WEBKIT_DISABLE_DMABUF_RENDERER=1, which improves compa
 - [x] Migration to tauri
 - [x] Add OOTB support for nvidia propietary drivers
 - [ ] Add flatpak version
+- [ ] Add FreeBSD version
+- [ ] Add ARM support 
 - [ ] Add more languages
 - [ ] Add a way to import CSVs or similar types of files to do several commands in order
 - [ ] Stylize the app
