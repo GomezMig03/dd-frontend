@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react'
+import { Fragment } from 'react'
 import './App.css';
 import Footer from './components/Footer';
 import FIleSections from './components/FileSections';
@@ -12,17 +12,18 @@ function App() {
     <Fragment>
       <Switch>
         <Route path="/">
-      <main className="App">
-        <ConfigButton />
-        <FIleSections />
-        <ConvertButton />
-      </main>
-      <Footer />
-      </Route>
-      <Route path="/config">
-        <ConfigPage />
-      </Route>
-    </Switch>
+          <main className="App">
+            <ConfigButton />
+            <FIleSections />
+            <ConvertButton />
+          </main>
+          <Footer />
+        </Route>
+        <Route path="/config">
+          <ConfigPage />
+          <Footer />
+        </Route>
+      </Switch>
     </Fragment>
   );
 }
