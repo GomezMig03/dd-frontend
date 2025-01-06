@@ -8,31 +8,39 @@
 #file-sections {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
-  width: 50%;
+  justify-content: space-evenly;
+  width: 75%;
   text-align: center;
+  margin-top: 10vh;
+  margin-left: 1.8em;
 }
 
 #file-sections p {
-  margin-right: 30px;
+  margin-right: 4.3em;
 }
 
 #input-section {
   display: flex;
   flex-flow: column nowrap;
-  margin: 0 5px;
+  margin: 0 .8vw .4vh;
 }
 
 #output-section {
   display: flex;
   flex-flow: column nowrap;
-  margin: 0 5px;
+  margin: 0 .8vw .4vh;
+}
+
+.text-inputs,
+#file-sections img {
+  max-height: 22px;
+  /* TODO: add another max-height for the cases when the viewport is higher than 1920x1080 */
 }
 
 #convert-button {
   width: fit-content;
   padding: 5px;
-  margin: 10px 0;
+  margin: 4vh 0 0;
 }
 
 #footer {
@@ -45,7 +53,7 @@
 
 #error-message {
   position: fixed;
-  margin-top: 25vh;
+  margin-top: 40vh;
 }
 
 #footer p {
