@@ -11,7 +11,6 @@
   justify-content: space-between;
   width: 50%;
   text-align: center;
-  padding: 0 20px;
 }
 
 #file-sections p {
@@ -141,4 +140,12 @@
 .disk-rom-list li:hover {
   background-color: rgb(192, 152, 230);
   cursor: pointer;
+}
+
+#footer {
+  display: flex;
+  width: 98%;
+  justify-items: space-between;
+  position: absolute;
+  bottom: 7px;
 }
