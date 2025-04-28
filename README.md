@@ -38,15 +38,16 @@ This project is run using WEBKIT_DISABLE_DMABUF_RENDERER=1, which improves compa
 - [x] Option to work with complete drives instead of just partitions (for cloning purposes)
 - [x] Migration to tauri
 - [x] Add OOTB support for nvidia propietary drivers
-- [ ] Add flatpak version
-- [ ] Add FreeBSD version
-- [ ] Add ARM support 
-- [ ] Add more languages
 - [ ] Add a way to import CSVs or similar types of files to do several commands in order
 - [ ] Stylize the app
 - [ ] Add different themes
+- [ ] Add Arch package
 - [ ] Add advance options in config
 - [ ] Add advance option for conversion of data (ASCII, EBCDIC, IBM, etc)
 - [ ] Add an advance option for compressing with tools like xz, gzip, etc.
 - [ ] Add advance option to specify block size (bs)
 - [ ] Add advance option for the rest of conv options, such as noerror or sync
+- [ ] Add more languages
+- [ ] Add flatpak version
+- [ ] Add FreeBSD version
+- [ ] Add ARM support 
