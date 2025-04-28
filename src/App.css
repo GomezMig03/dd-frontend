@@ -43,6 +43,26 @@
   margin: 4vh 0 0;
 }
 
+.csv-button {
+  margin-top: 1.2vh;
+}
+
+#warning {
+  margin: 1.2vh;
+  border: 1px solid black;
+  padding: 1.2vh 2.4vw;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: nowrap column;
+  align-items: center;
+}
+
+#warning ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
 #footer {
   display: flex;
   flex-flow: row nowrap;

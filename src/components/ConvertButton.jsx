@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react";
 import { useDDstore } from "../store";
 import { invoke } from "@tauri-apps/api/core";
+import Warnings from "./Warnings";
 
 const ConvertButton = () => {
     const inp = useDDstore((s) => s.input)
@@ -10,6 +11,11 @@ const ConvertButton = () => {
     const setOutput = useDDstore((s) => s.setOutput)
 
     const [error, setError] = useState(false)
+    const [warning, setWarning] = useState(false)
+
+    const openWarning = () => {
+        setWarning(true)
+    }
 
     const handleConvert = async () => {
         setError(false)
@@ -28,11 +34,14 @@ const ConvertButton = () => {
 
     return (
         <Fragment>
-            <button id="convert-button" onClick={handleConvert} >
+            <button id="convert-button" onClick={openWarning} >
                 Convert
             </button>
             {error && (
                 <span id="error-message">An error has ocurred during the execution of the dd command </span>
+            )}
+            {warning && (
+                <Warnings files={[{"input": inp, "output": out, "index": 1}]} sudo={sudo} />
             )}
         </Fragment>
     )
