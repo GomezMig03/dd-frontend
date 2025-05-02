@@ -1,6 +1,5 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import { useDDstore } from "../store";
-import { invoke } from "@tauri-apps/api/core";
 import Warnings from "./Warnings";
 
 const ConvertButton = () => {
@@ -10,27 +9,19 @@ const ConvertButton = () => {
     const setInput = useDDstore((s) => s.setInput)
     const setOutput = useDDstore((s) => s.setOutput)
 
-    const [error, setError] = useState(false)
     const [warning, setWarning] = useState(false)
+    const [error, setError] = useState(false)
 
     const openWarning = () => {
-        setWarning(true)
+        if (inp !== "" && out !== "") {
+            setWarning(true)
+        }
     }
 
-    const handleConvert = async () => {
+    useEffect(() => {
+        setWarning(false)
         setError(false)
-        invoke('use_dd', { inp, out, sudo })
-            .then((e) => {
-                console.log(e)
-                if (!e) {
-                    setError(true)
-                } else {
-                    setInput("")
-                    setOutput("")
-                }
-            })
-            .catch(() => setError(true))
-    }
+    }, [inp, out])
 
     return (
         <Fragment>
