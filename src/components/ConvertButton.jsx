@@ -1,6 +1,6 @@
 import { Fragment, useState, useEffect } from "react";
 import { useDDstore } from "../store";
-import Warnings from "./Warnings";
+import Warnings from "./Warnings.jsx";
 
 const ConvertButton = () => {
     const inp = useDDstore((s) => s.input)
@@ -32,7 +32,7 @@ const ConvertButton = () => {
                 <span id="error-message">An error has ocurred during the execution of the dd command </span>
             )}
             {warning && (
-                <Warnings files={[{"input": inp, "output": out, "index": 1}]} sudo={sudo} />
+                <Warnings files={{"input": inp, "output": out, "index": 1}} sudo={sudo} />
             )}
         </Fragment>
     )
